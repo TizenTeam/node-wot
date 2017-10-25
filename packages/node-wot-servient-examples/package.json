@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/raspberry-servient.ts",
-    "codestyle" : "standard --pretty"
+    "codestyle": "standard --pretty"
   },
   "author": "the thingweb community",
   "license": "W3C Software License",
@@ -21,13 +21,13 @@
   },
   "bin": {
     "raspberry-servient": "dist/raspberry-servient.js",
-	"wot-servient": "dist/command-line-tool/wot-servient.js"
+    "wot-servient": "dist/command-line-tool/wot-servient.js"
   },
   "dependencies": {
-    "node-wot": "0.3.0-SNAPSHOT.4",
+    "node-wot": "file:../node-wot",
     "wot-typescript-definitions": "0.3.0-SNAPSHOT.5",
-	"node-wot-td-tools": "0.3.0-SNAPSHOT.4",
-    "node-wot-protocol-coap": "0.3.0-SNAPSHOT.4",
-	"node-wot-protocol-http": "0.3.0-SNAPSHOT.4"
+    "node-wot-td-tools": "file:../node-wot-td-tools",
+    "node-wot-protocol-coap": "file:../node-wot-protocol-coap",
+    "node-wot-protocol-http": "file:../node-wot-protocol-http"
   }
 }
