@@ -11,6 +11,7 @@
     "pretest": "npm run build",
     "bootstrap": "lerna bootstrap",
     "link": "lerna-run npm link",
+    "install": "lerna-run npm install",
     "prelink": "npm run build",
     "codestyle": "lerna run codestyle"
   },
