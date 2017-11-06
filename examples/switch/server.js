@@ -4,6 +4,7 @@ const NAME_ACTION_TOGGLE = "toggle"
 
 WoT.expose({name: NAME_RESOURCE, url: "", description : undefined})
     .then(function(thing) {
+        const gValue = false;
         console.log("log: created " + thing.name);
 	fnOnWrite = function(newValue, oldValue) {
             console.log( "log: property: " + NAME_PROPERTY_VALUE + ": " + oldValue + " -> " + newValue);
@@ -11,11 +12,20 @@ WoT.expose({name: NAME_RESOURCE, url: "", description : undefined})
 	
         thing.addProperty({
 	    name : NAME_PROPERTY_VALUE,
-	    value : false,
+	    value : gValue,
 	    description: JSON.stringify({ type: "boolean" }),
 	    onWrite : fnOnWrite,
 	});
 
+
+      thing.addAction({
+	    name : "reset",
+	    action : () => {
+                thing.setProperty(NAME_PROPERTY_VALUE, gValue);
+                console.log("log: action: " + "reset" + ": " + gValue);
+                return gValue;
+                }});
+                      
         thing.addAction({
 	    name : NAME_ACTION_TOGGLE,
 	    action : () => {
