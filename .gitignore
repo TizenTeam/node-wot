@@ -42,3 +42,7 @@ dist/
 #ignore compiled tests and scratch compiles
 test/**/*.js
 src/**/*.js
+
+# Ignore temporary files etc
+*~
+*.tmp
