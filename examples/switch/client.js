@@ -1,0 +1,14 @@
+const NAME_RESOURCE = "BinarySwitchResURI"
+const NAME_PROPERTY_VALUE = "value"
+const NAME_ACTION_TOGGLE = "toggle"
+var targetUri = "http://localhost:8080/" + NAME_RESOURCE;
+
+WoT.consume(targetUri).then(function(thing) {
+    thing.getProperty( NAME_PROPERTY_VALUE ).then(function(value){
+	console.log("NAME_PROPERTY_VALUE=", value);
+        thing.setProperty( NAME_PROPERTY_VALUE, !value);
+    });
+    thing.invokeAction(NAME_ACTION_TOGGLE).then(function(response){
+        console.log("log: response: " + response);
+    });
+});
