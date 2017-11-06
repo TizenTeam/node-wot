@@ -1,0 +1,10 @@
+
+var stdin = Object.prototype(process.stdin);
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+var value = 0;
+process.stdin.on('data', function (input) {
+    value = parseInt(input.trim(), 10);
+    console.log( value );
+});

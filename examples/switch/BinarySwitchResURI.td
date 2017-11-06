@@ -1,0 +1,54 @@
+{ "@context" : [ "http://w3c.github.io/wot/w3c-wot-td-context.jsonld" ],
+  "@type" : [ "Thing" ],
+  "interaction" : [ { "@type" : [ "Property" ],
+        "link" : [ { "href" : "http://192.168.0.2:8080/BinarySwitchResURI/properties/value",
+              "mediaType" : "application/json"
+            },
+            { "href" : "http://192.168.0.2:8080/BinarySwitchResURI/properties/value",
+              "mediaType" : "text/plain"
+            },
+            { "href" : "http://127.0.0.1:8080/BinarySwitchResURI/properties/value",
+              "mediaType" : "application/json"
+            },
+            { "href" : "http://127.0.0.1:8080/BinarySwitchResURI/properties/value",
+              "mediaType" : "text/plain"
+            }
+          ],
+        "name" : "value",
+        "outputData" : "{\"type\":\"boolean\"}"
+      },
+      { "@type" : [ "Action" ],
+        "link" : [ { "href" : "http://192.168.0.2:8080/BinarySwitchResURI/actions/reset",
+              "mediaType" : "application/json"
+            },
+            { "href" : "http://192.168.0.2:8080/BinarySwitchResURI/actions/reset",
+              "mediaType" : "text/plain"
+            },
+            { "href" : "http://127.0.0.1:8080/BinarySwitchResURI/actions/reset",
+              "mediaType" : "application/json"
+            },
+            { "href" : "http://127.0.0.1:8080/BinarySwitchResURI/actions/reset",
+              "mediaType" : "text/plain"
+            }
+          ],
+        "name" : "reset"
+      },
+      { "@type" : [ "Action" ],
+        "link" : [ { "href" : "http://192.168.0.2:8080/BinarySwitchResURI/actions/toggle",
+              "mediaType" : "application/json"
+            },
+            { "href" : "http://192.168.0.2:8080/BinarySwitchResURI/actions/toggle",
+              "mediaType" : "text/plain"
+            },
+            { "href" : "http://127.0.0.1:8080/BinarySwitchResURI/actions/toggle",
+              "mediaType" : "application/json"
+            },
+            { "href" : "http://127.0.0.1:8080/BinarySwitchResURI/actions/toggle",
+              "mediaType" : "text/plain"
+            }
+          ],
+        "name" : "toggle"
+      }
+    ],
+  "name" : "BinarySwitchResURI"
+}

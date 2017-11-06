@@ -7,16 +7,7 @@ const servient =  new node_wot.Servient()
 servient.addClientFactory(new Http.HttpClientFactory());
 
 const WoT = servient.start()
-/*
-fs.readFile(src, "utf8", (err, data) => {
-    if (err) {
-        console.error("error while reading script", err);
-    } else {
-        console.log("running script", data);
-        servient.runPriviledgedScript(data);
-    }
-});
-*/
+
 function parse(funct)
 {
     process.stdin.resume();
@@ -29,7 +20,6 @@ function parse(funct)
         return value;
     });
 }
-
 
 const NAME_RESOURCE = "BinarySwitchResURI"
 const NAME_PROPERTY_VALUE = "value"
@@ -55,11 +45,6 @@ WoT.consume(targetUri).then(function(thing) {
         console.log("log: response: " + response);
     });
 
-    function handle(value)
-    {
-        thing.setProperty( NAME_PROPERTY_VALUE, value);
-    }
-    parse(handle);
+    parse(value => {thing.setProperty( NAME_PROPERTY_VALUE, value);});
     
 });
-
